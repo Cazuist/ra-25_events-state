@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 #root {
   min-width: 500px;
@@ -15,6 +16,7 @@
   justify-content: center;
   align-items: center;
   height: 50px;
+  margin-bottom: 50px;
   
   font-size: 30px;
   color: white;
@@ -201,3 +203,99 @@
 
 /* Drop menu components styles
 */
+
+.dropdown_wrapper {
+  position: relative;
+  width: 400px;
+
+  margin: 0 auto;
+  margin-bottom: 400px;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+
+  box-sizing: border-box;
+  background-color: #5380F7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dropdown-header_title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+
+  color: white;
+}
+
+.dropdown-header_btn {
+  background-color: #5380F7;
+  border-radius: 50%;
+  color: white;
+  animation: ripple 0.6s linear infinite;  
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 85px;
+  z-index: 100;
+
+  width: 100%;
+  padding: 10px 20px;
+  margin: 0;
+  
+  box-sizing: border-box;
+  list-style: none;
+  border-radius: 10px;
+
+  background-color: white;
+  box-shadow: 0 3px 10px gray;
+}
+
+.dropdown-list::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 25px;
+  z-index: -100;
+
+  width: 12px;
+  height: 12px;
+
+  transform: rotate(45deg);
+  box-shadow: -1px -1px 1px lightgray;
+  background-color: inherit;
+}
+
+.dropdown-item {
+  padding: 10px 0;
+
+  box-sizing: border-box;  
+  color: darkgray;
+  cursor: pointer;
+}
+
+.dropdown-item.selected {
+  color: #5380F7;
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.dropdown-item:not(:last-of-type) {
+  border-bottom: 2px solid lightgray;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
