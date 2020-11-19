@@ -1,38 +1,203 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+#root {
+  min-width: 500px;
+  max-width: 1300px;
+
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Portfolio components styles
+*/
+
+.task-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  
+  font-size: 30px;
+  color: white;
+  text-decoration: underline;
+  background-image: linear-gradient(45deg, blue, yellow);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.toolbar-box {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filter-tab {
+  box-sizing: border-box;
+  padding: 5px;
+
+  color: tan;
+  border: 2px solid tan;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-tab:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.selected-tab {
+  color: white;
+  background-color: tan;
+}
+
+.projects-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  width: 60%;
+  margin: 0 auto;
+}
+
+.img-preview_box {
+  width: 250px;
+  height: 200px;
+}
+
+.img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Products components styles
+*/
+.store-wrapper {
+  padding: 10px 25px;
+}
+
+.icon-switch-btn {
+  text-align: right;
+}
+
+.material-icons {
+  color: gray;
+  font-size: 36px;
+
+  cursor: pointer;
+}
+
+.cards-view-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shop-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  width: 250px;
+  height: 250px;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px gray;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.shop-card:nth-child(3n + 2) {
+  margin-left: calc((100% - 750px) / 2 );
+  margin-right: calc((100% - 750px) / 2 );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shop-card_title {
+  font-size: 25px;
+  text-transform: uppercase;
 }
+
+.shop-card_preview {
+  width: 200px;
+  height: 180px;
+
+  overflow: hidden;
+}
+
+.shop-card_img {
+  width: 210px;
+
+  object-position: -5px -65px;
+}
+
+.shop-card_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 10px;
+  color: red;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.shop-card_footer_add-button {
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 15px;
+
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.shop-item {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px;
+
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.shop-item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.shop-item_preview {
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.shop-item_img {
+  width: 140px;
+
+  object-position: -5px -58px;
+}
+
+.shop-item_title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.shop-item_price {
+  color: red;
+}
+
+.shop-item_add-button {
+  padding: 5px 10px;
+  color: red;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  box-sizing: border-box;
+  border: 1px solid red;
+  border-radius: 15px;
+
+  cursor: pointer;
+}
+
+/* Drop menu components styles
+*/
