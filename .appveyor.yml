@@ -1,4 +1,6 @@
-image: Visual Studio 2015
+image: Ubuntu1804
+
+stack: node 12
 
 branches:
   only:
@@ -6,16 +8,13 @@ branches:
 
 cache: node_modules
 
-init:
-  - ps: Install-Product node 12
-
 install:
-  - yarn
+  - yarn install
 
 build: off
 
 build_script:
-  - yarn run build
+  - yarn build
 
 deploy_script:
   - git config --global credential.helper store
