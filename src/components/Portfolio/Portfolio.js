@@ -13,16 +13,16 @@ export default function Portfolio() {
   const [projects, setFilteredProgects] = useState(data);
   const [selected, setFilter] = useState('All');
 
-  const onFilterClick = (filterName) => {
-    if (filterName === selected) return;
-
-    setFilter((prev) => prev = filterName);    
+  const onFilterClick = (filterName) => {    
+    if (filterName === selected) return;    
+    
+    setFilter((prev) => prev = filterName);  
 
     if(filterName === 'All') {
       setFilteredProgects(data);
     } else {
       setFilteredProgects(data.filter((prj) => prj.category === filterName));
-    }    
+    }
   }
     
   return (

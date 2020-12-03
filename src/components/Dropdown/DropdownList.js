@@ -6,9 +6,6 @@ export default function DropdownList({ list, viewStatus }) {
 
   const onChangeItem = (item) => {
     changeItem((prev) => prev = item);
-
-    console.log(item);
-    console.log(selectedItem);
   }
 
   if (!viewStatus) return null;
@@ -18,7 +15,7 @@ export default function DropdownList({ list, viewStatus }) {
       {list.map((item) => <DropdownItem item={item}
         selected={selectedItem}
         key={item}
-        onItemClick={onChangeItem}
+        onItemClick={() => onChangeItem(item)}
         />)}
     </ul>
   )

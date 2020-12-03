@@ -8,9 +8,8 @@ export default class Toolbar extends Component {
     onSelectFilter: PropTypes.func,
   }
 
-  onSelectFilter = (evt) => {
-    const clickedFilter = evt.currentTarget.textContent;
-    this.props.onSelectFilter(clickedFilter);
+  onSelectFilter = (filter) => {
+    this.props.onSelectFilter(filter);
   }
 
   render() {
@@ -21,7 +20,7 @@ export default class Toolbar extends Component {
         {filters.map((filter) => 
           <div
             key={filter}
-            onClick={this.onSelectFilter}
+            onClick={() => this.onSelectFilter(filter)}
             className={`filter-tab${filter === selected ? ' selected-tab' : ''}`}>
               {filter}
           </div>)}

@@ -3,7 +3,7 @@ export default function IconSwitch(props) {
 
   return (
     <div className='icon-switch-btn'>
-      <i className={'material-icons'} onClick={onSwitch}>
+      <i className={'material-icons'} onClick={() => onSwitch(icon)}>
         {icon}
       </i>
     </div>
